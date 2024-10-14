@@ -1,0 +1,92 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #d2e4fc; /* Warna latar belakang keseluruhan */
+}
+
+.calculator {
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  background-color: #1c1c1c; /* Warna hitam untuk latar belakang kalkulator */
+  padding: 20px;
+}
+
+.calculator-screen {
+  width: 100%;
+  height: 80px;
+  border: none;
+  background-color: #000;
+  color: white;
+  text-align: right;
+  padding: 20px;
+  font-size: 2.5rem;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.calculator-keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+button {
+  height: 60px;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #333; /* Warna dasar untuk tombol angka */
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #444;
+}
+
+.operator {
+  background-color: #f7961c; /* Warna oranye untuk tombol operator */
+  color: white;
+}
+
+.equal-sign {
+  background-color: #f7961c; /* Warna oranye untuk tombol "=" */
+  color: white;
+  grid-column: span 1;
+}
+
+.zero {
+  grid-column: span 2; /* Memperlebar tombol 0 */
+}
+
+.all-clear, .delete {
+  background-color: #a5a5a5; /* Warna abu-abu untuk tombol AC dan DEL */
+  color: white;
+}
+
+button:active {
+  transform: scale(0.95); /* Efek saat tombol ditekan */
+}
+
+@media (max-width: 480px) {
+  .calculator {
+    padding: 10px;
+    max-width: 250px; /* Membatasi ukuran maksimum kalkulator di layar yang lebih kecil */
+  }
+
+  .calculator-screen {
+    height: 60px;
+    font-size: 1.5rem;
+    padding: 10px;
+  }
+
+  button {
+    height: 40px;
+    font-size: 1.1rem;
+  }
+}
